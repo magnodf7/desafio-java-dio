@@ -1,5 +1,5 @@
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta implements Comparable<Conta> {
 
 	public ContaCorrente(Cliente cliente) {
 		super(cliente);
@@ -10,5 +10,9 @@ public class ContaCorrente extends Conta {
 		System.out.println("=== Extrato Conta Corrente ===");
 		super.imprimirInfosComuns();
 	}
-	
+
+	@Override
+	public int compareTo(Conta o) {
+		return o.getAgencia();
+	}
 }
