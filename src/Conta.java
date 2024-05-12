@@ -15,6 +15,17 @@ public abstract class Conta implements IConta {
 		this.cliente = cliente;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Conta{" +
+				"agencia=" + agencia +
+				", numero=" + numero +
+				", saldo=" + saldo +
+				", cliente=" + cliente +
+				'}';
+	}
+
 	@Override
 	public void sacar(double valor) {
 		saldo -= valor;
